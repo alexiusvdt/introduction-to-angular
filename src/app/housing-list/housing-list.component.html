@@ -5,6 +5,9 @@
 
 <!-- template syntax -->
 <!-- location is a local var templated out of the list array -->
-<article *ngFor="let location of locationList">
+<!-- hooking in details for clicked user locations -->
+<article *ngFor="let location of results">
   <p>{{location.name}}</p>
+  <button (click)="selectHousingLocation(location)">View</button>
+
 </article>
