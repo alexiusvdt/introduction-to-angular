@@ -16,8 +16,13 @@ cmds:
 `ng serve` runs dev server
 `ng new` angular cli starter
 `ng generate component component-name` via cli will initialize component
+`ng generate interface interface-name` interfaces shape the data in TypeScript (type casting template)
 
 Components: bricks used for construction. Each has an html file for the template, a css for style and typescript for the behavior.
 
 Syntax: surround the type of the event in parens & assign a name to the function that will be called on click:
 <button (click)="doAThing()">
+
+template variable: adding to form field via # gives it a variable template which can be then assigned & passed into a function (see search in housing-list & relevant ts file)
+
+shaping objects: like in c# (or whatever this truly came from) you can set params for how each object will look. In this program, housing-location.ts is an interface that defines what an object will look like. We then import that into app.ts and prepopulate with some data.
