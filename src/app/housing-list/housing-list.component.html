@@ -2,3 +2,9 @@
 <label for="location-search">Search for a place</label>
 <input id="location-search" #search placeholder="ex: Portland">
 <button (click)="searchHousingLocations(search.value)">Search</button>
+
+<!-- template syntax -->
+<!-- location is a local var templated out of the list array -->
+<article *ngFor="let location of locationList">
+  <p>{{location.name}}</p>
+</article>

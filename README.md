@@ -26,3 +26,6 @@ Syntax: surround the type of the event in parens & assign a name to the function
 template variable: adding to form field via # gives it a variable template which can be then assigned & passed into a function (see search in housing-list & relevant ts file)
 
 shaping objects: like in c# (or whatever this truly came from) you can set params for how each object will look. In this program, housing-location.ts is an interface that defines what an object will look like. We then import that into app.ts and prepopulate with some data.
+
+ngFor: see housing-list html.
+Essentially lets you interpolate an object into its parts. Our massive Location array can be split out by calling *ngFor and assigning local variable templaes for it to populate into

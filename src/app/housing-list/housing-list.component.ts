@@ -10,14 +10,20 @@ export class HousingListComponent implements OnInit {
 
   // decorator for HousingLocation type elements
   @Input() locationList: HousingLocation[] = [];
-  
+  results:HousingLocation[] = [];
   constructor() { }
 
   ngOnInit(): void {
   }
   // type checking!
   searchHousingLocations(searchText: string) {
-    console.log(searchText);
+    // console.log(searchText);
+    if(!searchText) return;
+    
+    this.results = this.locationList
+    .filter(
+      location => location.city.toLowerCase().includes(searchText.toLowerCase())
+    )
   }
 
 }
