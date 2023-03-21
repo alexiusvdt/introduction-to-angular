@@ -14,3 +14,7 @@ The step-by-step guide can be found at [https://codelabs.developers.google.com/i
 ## Notes
 cmds: 
 `ng serve` runs dev server
+`ng new` angular cli starter
+`ng generate component component-name` via cli will initialize component
+
+Components: bricks used for construction. Each has an html file for the template, a css for style and typescript for the behavior.
