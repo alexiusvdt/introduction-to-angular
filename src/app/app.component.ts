@@ -38,6 +38,10 @@ export class AppComponent {
       laundry: false,
     }
   ];
-  
+  // we have to allow undefined here as we won't always have a selected location!
+  selectedLocation: HousingLocation | undefined;
+  updateSelectedLocation(location: HousingLocation) {
+    this.selectedLocation = location;
+  }
   
 }

@@ -3,7 +3,15 @@
     <img src="../assets/logo.svg" alt="fairhouse logo"> Fairhouse
   </header>
   <section>
-    <!-- must be in brackets to dynamically bind value of location list to a variable or expression -->
-    <app-housing-list [locationList]="housingLocationList"></app-housing-list>
+    <!-- now we add the event listener here which will recognize when the selected location changes, running the update func with the event (object of type HousingList because that's what we set EventEmitter to) as an arg  -->
+    <app-housing-list [locationList]="housingLocationList" (selectedLocationEvent)="updateSelectedLocalEvent($event)"></app-housing-list>
   </section>
+  <article>
+    <img [src]="selectedLocation?.photo">
+    <p>{{selectedLocation?.name}}</p>
+    <p>{{selectedLocation?.availableUnits}}</p>
+    <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
+    <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
+    <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>  
+  </article>
 </main>
