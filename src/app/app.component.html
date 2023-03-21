@@ -4,14 +4,16 @@
   </header>
   <section>
     <!-- now we add the event listener here which will recognize when the selected location changes, running the update func with the event (object of type HousingList because that's what we set EventEmitter to) as an arg  -->
-    <app-housing-list [locationList]="housingLocationList" (selectedLocationEvent)="updateSelectedLocalEvent($event)"></app-housing-list>
+    <app-housing-list [locationList]="housingLocationList" (selectedLocationEvent)="updateSelectedLocation($event)"></app-housing-list>
   </section>
   <article>
-    <img [src]="selectedLocation?.photo">
-    <p>{{selectedLocation?.name}}</p>
-    <p>{{selectedLocation?.availableUnits}}</p>
-    <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
-    <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
-    <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>  
+    <ng-container *ngIf="selectedLocation">
+      <img [src]="selectedLocation?.photo">
+      <p>{{selectedLocation?.name}}</p>
+      <p>{{selectedLocation?.availableUnits}}</p>
+      <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
+      <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
+      <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>  
+  </ng-container>
   </article>
 </main>
