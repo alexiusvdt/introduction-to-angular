@@ -1,4 +1,4 @@
 
 <label for="location-search">Search for a place</label>
-<input id="location-search" placeholder="ex: Portland">
-<button>Search</button>
+<input id="location-search" #search placeholder="ex: Portland">
+<button (click)="searchHousingLocations(search.value)">Search</button>

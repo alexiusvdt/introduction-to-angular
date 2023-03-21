@@ -11,5 +11,9 @@ export class HousingListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // type checking!
+  searchHousingLocations(searchText: string) {
+    console.log(searchText);
+  }
 
 }
