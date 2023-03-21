@@ -3,6 +3,7 @@
     <img src="../assets/logo.svg" alt="fairhouse logo"> Fairhouse
   </header>
   <section>
-    <app-housing-list></app-housing-list>
+    <!-- must be in brackets to dynamically bind value of location list to a variable or expression -->
+    <app-housing-list [locationList]="housingLocationList"></app-housing-list>
   </section>
 </main>
