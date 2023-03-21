@@ -29,3 +29,11 @@ shaping objects: like in c# (or whatever this truly came from) you can set param
 
 ngFor: see housing-list html.
 Essentially lets you interpolate an object into its parts. Our massive Location array can be split out by calling *ngFor and assigning local variable templaes for it to populate into
+
+ng-container: won't render to dom, great for using ngIf to conditionally display elements
+
+Additional work ideas:
+* refactor the data into an Angular Service (containing the home data)
+* Add a route for details page
+* use angular http to retrieve data at a REST point
+
